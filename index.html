@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rail World</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #000; font-family: system-ui, sans-serif; }
+  canvas { display: block; }
+  #hud { position: fixed; left: 12px; bottom: 12px; color: #fff; background: #0008; padding: 6px 10px; border-radius: 6px; font-size: 14px; }
+  #minimap { position: fixed; left: 12px; top: 12px; background: #0009; border-radius: 8px; cursor: pointer; width: 240px; height: 240px; }
+  #fade { position: fixed; inset: 0; background: #000; opacity: 0; pointer-events: none; }
+  #caption { position: fixed; left: 28px; bottom: 28px; color: #fff; font-size: 22px; letter-spacing: .02em; padding: 10px 18px;
+             background: linear-gradient(90deg, #000b, #0000); border-left: 4px solid #e0a43c; opacity: 0; transition: opacity .6s; pointer-events: none; }
+  #cab { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); display: none; gap: 22px; align-items: center;
+         color: #e8f0ff; background: #0a1220cc; border: 1px solid #3b4a63; border-radius: 12px; padding: 10px 22px; font-family: ui-monospace, monospace; pointer-events: none; }
+  #cab .speed { font-size: 52px; line-height: 1; min-width: 120px; text-align: right; }
+  #cab .speed small { font-size: 16px; opacity: .7; margin-left: 4px; }
+  #cab .col { display: flex; flex-direction: column; gap: 4px; font-size: 14px; min-width: 190px; }
+  #cab .sig { display: inline-block; width: 14px; height: 14px; border-radius: 50%; margin-right: 6px; vertical-align: -2px; background: #555; }
+  .pip-label { position: fixed; color: #fff; font-size: 12px; background: #000a; padding: 2px 6px; border-radius: 3px; pointer-events: none; display: none; }
+</style>
+</head>
+<body>
+<canvas id="minimap"></canvas>
+<div id="hud"></div>
+<div id="cab"><div class="speed"><span id="cab-speed">0</span><small>km/h</small></div>
+  <div class="col"><div>Limite : <span id="cab-limit">–</span> km/h</div><div><span class="sig" id="cab-sig"></span><span id="cab-next">–</span></div><div>Pente : <span id="cab-grade">0</span> %</div></div></div>
+<div id="caption"></div>
+<div id="fade"></div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+{
+  "centerline": [
+    [
+      -950,
+      0
+    ],
+    [
+      -700,
+      -420
+    ],
+    [
+      -250,
+      -640
+    ],
+    [
+      250,
+      -700
+    ],
+    [
+      750,
+      -520
+    ],
+    [
+      1050,
+      -150
+    ],
+    [
+      1000,
+      300
+    ],
+    [
+      650,
+      560
+    ],
+    [
+      150,
+      430
+    ],
+    [
+      -300,
+      620
+    ],
+    [
+      -750,
+      520
+    ]
+  ],
+  "trackSpacing": 4.5,
+  "platformOffset": 4.5,
+  "blockLength": 350,
+  "stations": [
+    {
+      "name": "Nord",
+      "at": 0.08
+    },
+    {
+      "name": "Est",
+      "at": 0.4
+    },
+    {
+      "name": "Sud",
+      "at": 0.72
+    }
+  ],
+  "terrain": {
+    "seed": 7,
+    "amplitude": 100,
+    "scale": 800,
+    "maxGrade": 0.02,
+    "features": [
+      {
+        "a": [
+          -200,
+          -980
+        ],
+        "b": [
+          40,
+          -300
+        ],
+        "width": 170,
+        "height": 70
+      },
+      {
+        "a": [
+          1350,
+          300
+        ],
+        "b": [
+          760,
+          320
+        ],
+        "width": 130,
+        "height": 50
+      },
+      {
+        "a": [
+          330,
+          -950
+        ],
+        "b": [
+          350,
+          -450
+        ],
+        "width": 170,
+        "height": -35
+      }
+    ]
+  },
+  "urban": [
+    {
+      "station": "Est",
+      "radius": 380
+    },
+    {
+      "station": "Nord",
+      "radius": 200
+    },
+    {
+      "station": "Sud",
+      "radius": 250
+    },
+    {
+      "station": "Centre",
+      "radius": 200
+    },
+    {
+      "depot": "Dépôt Ouest",
+      "radius": 170
+    },
+    {
+      "at": [
+        -1250,
+        420
+      ],
+      "village": true,
+      "name": "Mervent",
+      "radius": 120
+    },
+    {
+      "at": [
+        -560,
+        -880
+      ],
+      "village": true,
+      "name": "Saint-Aubin",
+      "radius": 110
+    },
+    {
+      "at": [
+        950,
+        800
+      ],
+      "village": true,
+      "name": "Les Roches",
+      "radius": 125
+    },
+    {
+      "at": [
+        100,
+        -1100
+      ],
+      "village": true,
+      "name": "Hautefeuille",
+      "radius": 105
+    },
+    {
+      "station": "Roquemaure",
+      "radius": 160
+    },
+    {
+      "station": "Bois-Joli",
+      "radius": 110
+    }
+  ],
+  "depots": [
+    {
+      "name": "Dépôt Ouest",
+      "at": 0.92,
+      "tracks": 6,
+      "on": [
+        "A",
+        "B"
+      ]
+    }
+  ],
+  "circuits": [
+    {
+      "id": "A",
+      "name": "Ligne A (omnibus)",
+      "track": "A",
+      "type": "omnibus",
+      "fleet": 4,
+      "service": 3,
+      "cars": 4,
+      "stops": {
+        "Nord": true,
+        "Est": true,
+        "Sud": true
+      }
+    },
+    {
+      "id": "B",
+      "name": "Ligne B (omnibus)",
+      "track": "B",
+      "type": "omnibus",
+      "fleet": 3,
+      "service": 2,
+      "cars": 4,
+      "stops": {
+        "Nord": true,
+        "Est": true,
+        "Sud": true
+      }
+    },
+    {
+      "id": "C1",
+      "name": "Ligne C (sens A)",
+      "track": "A",
+      "type": "omnibus",
+      "fleet": 3,
+      "service": 1,
+      "cars": 3,
+      "via": [
+        "C"
+      ]
+    },
+    {
+      "id": "C2",
+      "name": "Ligne C (sens B)",
+      "track": "B",
+      "type": "omnibus",
+      "fleet": 3,
+      "service": 1,
+      "cars": 3,
+      "via": [
+        "C"
+      ]
+    },
+    {
+      "id": "F",
+      "name": "Fret B",
+      "track": "B",
+      "type": "fret",
+      "fleet": 2,
+      "service": 1,
+      "cars": 8
+    },
+    {
+      "id": "D1",
+      "name": "Ligne D (antenne)",
+      "track": "B",
+      "type": "omnibus",
+      "fleet": 3,
+      "service": 1,
+      "cars": 3,
+      "via": [
+        "D"
+      ]
+    }
+  ],
+  "rivers": [
+    {
+      "name": "La Veyre",
+      "width": 26,
+      "points": [
+        [
+          -253,
+          404
+        ],
+        [
+          -246,
+          311
+        ],
+        [
+          -344,
+          -10
+        ],
+        [
+          -391,
+          -392
+        ],
+        [
+          -373,
+          -437
+        ],
+        [
+          -487,
+          -630
+        ],
+        [
+          -390,
+          -781
+        ],
+        [
+          -396,
+          -957
+        ],
+        [
+          -456,
+          -1246
+        ],
+        [
+          -263,
+          -1500
+        ]
+      ]
+    }
+  ],
+  "chords": [
+    {
+      "id": "C",
+      "name": "Corde du Centre",
+      "from": 0.2,
+      "to": 0.6,
+      "via": [
+        [
+          80,
+          -540
+        ],
+        [
+          340,
+          -160
+        ],
+        [
+          580,
+          60
+        ],
+        [
+          740,
+          260
+        ]
+      ],
+      "stations": [
+        {
+          "name": "Centre",
+          "at": 0.45
+        }
+      ]
+    }
+  ],
+  "branches": [
+    {
+      "id": "D",
+      "name": "Antenne de Roquemaure",
+      "from": 0.82,
+      "side": "B",
+      "via": [
+        [
+          -300,
+          1000
+        ],
+        [
+          -120,
+          1500
+        ],
+        [
+          380,
+          1900
+        ],
+        [
+          900,
+          2050
+        ]
+      ],
+      "loops": [
+        {
+          "name": "Bois-Joli",
+          "at": 0.48
+        }
+      ],
+      "terminus": "Roquemaure"
+    }
+  ]
+}
